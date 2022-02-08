@@ -11,7 +11,7 @@ CREATE TABLE LIVROS(
     VALOR FLOAT(10,2),
     UF CHAR(2),
     ANO INT(4)
-)
+);
 
 INSERT INTO LIVROS VALUES('Cavaleiro Real','Ana Claudia','F',465,'Atlas',49.9,'RJ',2009);
 INSERT INTO LIVROS VALUES('SQL para leigos','João Nunes','M',450,'Addison',98,'SP',2018);
@@ -50,4 +50,4 @@ WHERE UF = 'SP';
 SELECT AUTOR, SEXO, UF
 FROM LIVROS
 WHERE SEXO = 'M'
-AND UF = 'SP' OR 'RJ';
+AND (UF = 'SP' OR 'RJ');
