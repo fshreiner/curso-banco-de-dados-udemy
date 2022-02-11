@@ -19,23 +19,18 @@ SELECT
     IDREGIAO
 FROM
     FUNCIONARIOS
-WHERE DEPARTAMENTO = 'FILMES' 
-OR DEPARTAMENTO = 'ROUPAS';
+WHERE DEPARTAMENTO = 'ROUPAS' 
+OR DEPARTAMENTO = 'FILMES';
 
 
 --O gestor de marketing pediu a lista das funcionarias (AS) = FEMININO que trabalhem no departamento 
 --de filmes ou no departamento lar. Ele necessita enviar um email para as colaboradoras
 --desses dois setores. OR +  AND *
-SELECT
-    NOME,
-    EMAIL,
-    SEXO,
-    DEPARTAMENTO
-FROM
-    FUNCIONARIOS
+SELECT * FROM FUNCIONARIOS
 WHERE
-    SEXO = 'FEMININO' 
-AND (DEPARTAMENTO = 'FILMES' OR DEPARTAMENTO = 'LAR');
+( DEPARTAMENTO = 'Lar' AND SEXO = 'Feminino' )
+OR
+( DEPARTAMENTO = 'Filmes' AND SEXO = 'Feminino' );
 
 
 --Traga os funcionarios do sexo masculino
